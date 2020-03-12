@@ -11,14 +11,14 @@ namespace HarapekoSnake
         {
             BackgroundColor = Color.FromArgb(27, 94, 32);
 
-            var title = new TextDrawable("はらぺこスネーク", Resources.I.GetFont(32), Color.Orange);
-            title.Location = new Vector(game.Width / 4 - title.Width / 2, 24);
+            var title = new TextDrawable("はらぺこスネーク", Resources.I.GetFont(64), Color.Orange);
+            title.Location = new Vector(game.Width / 2 - title.Width / 2, 48);
 
-            var label = new TextDrawable("がめんを クリックして スタート", Resources.I.GetFont(12), Color.White);
-            label.Location = new Vector(game.Width / 4 - label.Width / 2, 120);
+            var label = new TextDrawable("スペースキーを おして スタート", Resources.I.GetFont(24), Color.White);
+            label.Location = new Vector(game.Width / 2 - label.Width / 2, 240);
 
-            var copyright = new TextDrawable("(C)2020 Xeltica", Resources.I.GetFont(12), Color.White);
-            copyright.Location = new Vector(4, 224);
+            var copyright = new TextDrawable("(C)2020 Xeltica", Resources.I.GetFont(24), Color.White);
+            copyright.Location = new Vector(8, 448);
 
             Root.Add(title);
             Root.Add(label);
@@ -29,7 +29,7 @@ namespace HarapekoSnake
 
         public override void OnUpdate(Router router, GameBase game, DFEventArgs e)
         {
-            if (DFMouse.IsLeft && game.IsFocused)
+            if (DFKeyboard.Space && game.IsFocused)
             {
                 router.ChangeScene<GameScene>();
             }

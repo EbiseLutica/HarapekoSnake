@@ -23,7 +23,7 @@ namespace HarapekoSnake
 
         private Resources()
         {
-            var sprites = Texture2D.LoadAndSplitFrom("./resources/sprites.png", 6, 1, VectorInt.One * 8);
+            var sprites = Texture2D.LoadAndSplitFrom("./resources/sprites.png", 6, 1, VectorInt.One * 16);
             TextureSnakeHead = sprites[0];
             TextureSnakeBody  = sprites[1];
             TextureFruit = sprites[2];
