@@ -16,9 +16,14 @@ namespace HarapekoSnake
         public IAudioSource BgmMain { get;}
         public IAudioSource BgmTitle { get;}
 
+        public DotFeather.Font GetFont(float size = 16, FontStyle style = FontStyle.Normal)
+        {
+            return new DotFeather.Font("./resources/font.ttf", size, style);
+        }
+
         private Resources()
         {
-            var sprites = Texture2D.LoadAndSplitFrom("./sprites.png", 6, 1, VectorInt.One * 8);
+            var sprites = Texture2D.LoadAndSplitFrom("./resources/sprites.png", 6, 1, VectorInt.One * 8);
             TextureSnakeHead = sprites[0];
             TextureSnakeBody  = sprites[1];
             TextureFruit = sprites[2];
@@ -26,8 +31,8 @@ namespace HarapekoSnake
             TextureBug1 = sprites[4];
             TextureBug2 = sprites[5];
 
-            BgmMain = new VorbisAudioSource("./bgm_main.ogg");
-            BgmTitle = new VorbisAudioSource("./bgm_title.ogg");
+            BgmMain = new VorbisAudioSource("./resources/bgm_main.ogg");
+            BgmTitle = new VorbisAudioSource("./resources/bgm_title.ogg");
         }
     }
 }

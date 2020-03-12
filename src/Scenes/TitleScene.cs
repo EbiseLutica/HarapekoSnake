@@ -11,14 +11,14 @@ namespace HarapekoSnake
         {
             BackgroundColor = Color.FromArgb(27, 94, 32);
 
-            var title = new TextDrawable("はらぺこスネーク", new DFFont("font.ttf", 64), Color.Orange);
-            title.Location = new Vector(game.Width / 2 - title.Width / 2, 48);
+            var title = new TextDrawable("はらぺこスネーク", Resources.I.GetFont(32), Color.Orange);
+            title.Location = new Vector(game.Width / 4 - title.Width / 2, 24);
 
-            var label = new TextDrawable("がめんを クリックして スタート", new DFFont("font.ttf", 24), Color.White);
-            label.Location = new Vector(game.Width / 2 - label.Width / 2, 240);
+            var label = new TextDrawable("がめんを クリックして スタート", Resources.I.GetFont(12), Color.White);
+            label.Location = new Vector(game.Width / 4 - label.Width / 2, 120);
 
-            var copyright = new TextDrawable("(C)2020 Xeltica", new DFFont("font.ttf", 24), Color.White);
-            copyright.Location = new Vector(8, 448);
+            var copyright = new TextDrawable("(C)2020 Xeltica", Resources.I.GetFont(12), Color.White);
+            copyright.Location = new Vector(4, 224);
 
             Root.Add(title);
             Root.Add(label);
