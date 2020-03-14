@@ -201,7 +201,7 @@ namespace HarapekoSnake
         }
 
         private bool IntersectWithApple()
-            => currentApple == null ? false : snake.Select(s => s.Sprite).Any(body => Intersect(body, currentApple));
+            => currentApple == null ? false : Intersect(snake.First().Sprite, currentApple);
 
         private void RenderSnake()
         {
